@@ -37,14 +37,16 @@ namespace CustomerRestAPI.Controllers
         
         // PUT: api/Customers/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody]CustomerBO cust)
         {
+            facade.CustomerService.Update(cust);
         }
         
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            facade.CustomerService.Delete(id);
         }
     }
 }
