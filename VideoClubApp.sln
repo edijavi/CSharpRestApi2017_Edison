@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoAppBLL", "VideoAppBLL\VideoAppBLL.csproj", "{C63537AB-7C31-496F-8D4D-6C5CD93D768D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoAppDAL", "VideoAppDAL\VideoAppDAL.csproj", "{5B2A5472-C838-4706-8043-7D6A30455B50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoAppUI", "VideoAppUI\VideoAppUI.csproj", "{CEBA5137-EEC7-4AAB-A23C-EDDF91BBC023}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C63537AB-7C31-496F-8D4D-6C5CD93D768D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C63537AB-7C31-496F-8D4D-6C5CD93D768D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C63537AB-7C31-496F-8D4D-6C5CD93D768D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C63537AB-7C31-496F-8D4D-6C5CD93D768D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B2A5472-C838-4706-8043-7D6A30455B50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B2A5472-C838-4706-8043-7D6A30455B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B2A5472-C838-4706-8043-7D6A30455B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B2A5472-C838-4706-8043-7D6A30455B50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEBA5137-EEC7-4AAB-A23C-EDDF91BBC023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEBA5137-EEC7-4AAB-A23C-EDDF91BBC023}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEBA5137-EEC7-4AAB-A23C-EDDF91BBC023}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEBA5137-EEC7-4AAB-A23C-EDDF91BBC023}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9BB65D5F-6B3F-4272-9DE8-365E0854FBF3}
+	EndGlobalSection
+EndGlobal
