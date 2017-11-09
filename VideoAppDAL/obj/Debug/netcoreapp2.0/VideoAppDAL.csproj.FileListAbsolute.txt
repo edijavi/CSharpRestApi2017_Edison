@@ -10,7 +10,6 @@ C:\Users\edila\Desktop\VideoClubApp\VideoAppDAL\obj\Debug\netcoreapp2.0\VideoApp
 C:\work\cSharp\CSharpRestAPI2017\VideoAppDAL\bin\Debug\netcoreapp2.0\VideoAppDAL.deps.json
 C:\work\cSharp\CSharpRestAPI2017\VideoAppDAL\bin\Debug\netcoreapp2.0\VideoAppDAL.dll
 C:\work\cSharp\CSharpRestAPI2017\VideoAppDAL\bin\Debug\netcoreapp2.0\VideoAppDAL.pdb
-C:\work\cSharp\CSharpRestAPI2017\VideoAppDAL\obj\Debug\netcoreapp2.0\VideoAppDAL.csprojResolveAssemblyReference.cache
 C:\work\cSharp\CSharpRestAPI2017\VideoAppDAL\obj\Debug\netcoreapp2.0\VideoAppDAL.csproj.CoreCompileInputs.cache
 C:\work\cSharp\CSharpRestAPI2017\VideoAppDAL\obj\Debug\netcoreapp2.0\VideoAppDAL.AssemblyInfoInputs.cache
 C:\work\cSharp\CSharpRestAPI2017\VideoAppDAL\obj\Debug\netcoreapp2.0\VideoAppDAL.AssemblyInfo.cs
