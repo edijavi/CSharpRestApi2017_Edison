@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace VideoAppBLL.BusinessObjects
@@ -8,6 +9,9 @@ namespace VideoAppBLL.BusinessObjects
     {
         public int Id { get; set; }
 
+        [Required]
+        [MaxLength(20)]
+        [MinLength(2)]
         public string VideoName { get; set; }
 
         public string VideoType { get; set; }

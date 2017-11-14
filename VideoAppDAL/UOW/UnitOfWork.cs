@@ -6,15 +6,17 @@ using System.Text;
 
 namespace VideoAppDAL.UOW
 {
-    public class UnitOfWorkMem : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         public IVideoRepository VideoRepository { get; internal set; }
-        private InMemoryContext context;
+        public IOrderRepository OrderRepository { get; internal set; }
+        private VideoAppContext context;
 
-        public UnitOfWorkMem()
+        public UnitOfWork()
         {
-            context = new InMemoryContext();
+            context = new VideoAppContext();
             VideoRepository = new VideoRepositoryEFMemory(context);
+            OrderRepository = new OrderRepository(context);
         }
 
         public int Complete()
