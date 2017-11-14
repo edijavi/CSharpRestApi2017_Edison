@@ -9,3 +9,7 @@ C:\work\cSharp\CSharpRestAPI2017\VideoRestAPI\obj\Debug\netcoreapp2.0\VideoRestA
 C:\work\cSharp\CSharpRestAPI2017\VideoRestAPI\obj\Debug\netcoreapp2.0\VideoRestAPI.AssemblyInfo.cs
 C:\work\cSharp\CSharpRestAPI2017\VideoRestAPI\obj\Debug\netcoreapp2.0\VideoRestAPI.dll
 C:\work\cSharp\CSharpRestAPI2017\VideoRestAPI\obj\Debug\netcoreapp2.0\VideoRestAPI.pdb
+C:\work\cSharp\CSharpRestAPI2017\VideoRestAPI\bin\Debug\netcoreapp2.0\VideoAppBLL.dll
+C:\work\cSharp\CSharpRestAPI2017\VideoRestAPI\bin\Debug\netcoreapp2.0\VideoAppDAL.dll
+C:\work\cSharp\CSharpRestAPI2017\VideoRestAPI\bin\Debug\netcoreapp2.0\VideoAppBLL.pdb
+C:\work\cSharp\CSharpRestAPI2017\VideoRestAPI\bin\Debug\netcoreapp2.0\VideoAppDAL.pdb

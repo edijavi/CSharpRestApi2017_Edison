@@ -15,3 +15,4 @@ C:\work\cSharp\CSharpRestAPI2017\VideoAppDAL\obj\Debug\netcoreapp2.0\VideoAppDAL
 C:\work\cSharp\CSharpRestAPI2017\VideoAppDAL\obj\Debug\netcoreapp2.0\VideoAppDAL.AssemblyInfo.cs
 C:\work\cSharp\CSharpRestAPI2017\VideoAppDAL\obj\Debug\netcoreapp2.0\VideoAppDAL.dll
 C:\work\cSharp\CSharpRestAPI2017\VideoAppDAL\obj\Debug\netcoreapp2.0\VideoAppDAL.pdb
+C:\work\cSharp\CSharpRestAPI2017\VideoAppDAL\obj\Debug\netcoreapp2.0\VideoAppDAL.csprojResolveAssemblyReference.cache
