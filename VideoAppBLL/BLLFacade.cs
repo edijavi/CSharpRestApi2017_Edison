@@ -12,5 +12,10 @@ namespace VideoAppBLL
         {
             get { return new VideoService(new DALFacade()); }
         }
+
+        public IOrderService OrderService
+        {
+            get { return new OrderService(new DALFacade()); }
+        }
     }
 }
