@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,10 @@ namespace VideoAppDAL.Repositories
 
         public Order Create(Order order)
         {
+            if (order.Video !=null)
+            {
+                _context.Entry(order.Video).State =EntityState.Unchanged;
+            }
             _context.Orders.Add(order);
             return order;
 

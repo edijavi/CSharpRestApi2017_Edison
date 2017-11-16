@@ -35,7 +35,7 @@ namespace VideoRestAPI
             {
                 app.UseDeveloperExceptionPage();
                 var facade = new BLLFacade();
-                facade.VideoService.Create(
+                var vid = facade.VideoService.Create(
                     new VideoBO() {
                             VideoName="llkk",
                             VideoType="terror",
@@ -47,6 +47,13 @@ namespace VideoRestAPI
                             VideoName = "yo",
                             VideoType = "bio",
                             VideoLocation = "hall 00"
+                    });
+                facade.OrderService.Create(
+                    new OrderBO()
+                    {
+                        DeliveryDate = DateTime.Now.AddMonths(1),
+                        OrderDate = DateTime.Now.AddMonths(-1),
+                        Video = vid
                     });
             }
 

@@ -19,7 +19,8 @@ namespace VideoRestAPI
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
-                .Build();
+            .CaptureStartupErrors(true)
+            .UseStartup<Startup>()
+            .Build();
     }
 }

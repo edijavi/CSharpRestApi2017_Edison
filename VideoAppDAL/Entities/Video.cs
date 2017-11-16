@@ -13,5 +13,8 @@ namespace VideoAppDAL.Entities
         public string VideoType { get; set; }
 
         public string VideoLocation { get; set; }
+
+        //Relación de uno a varios objetos
+        public List<Order> Orders  { get; set; }
     }
 }
