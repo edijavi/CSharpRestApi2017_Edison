@@ -35,26 +35,56 @@ namespace VideoRestAPI
             {
                 app.UseDeveloperExceptionPage();
                 var facade = new BLLFacade();
+
+                var address = facade.AddressService.Create( 
+                    new AddressBO() {
+                        City = "Kolding",
+                        Street = "Kirkegade",
+                        Number = "22A"
+                    });
+
+                var address2 = facade.AddressService.Create(
+                    new AddressBO()
+                    {
+                        City = "Esbjerg",
+                        Street = "321",
+                        Number = "111"
+                    });
+                var address3 = facade.AddressService.Create(
+                    new AddressBO()
+                    {
+                        City = "Braming",
+                        Street = "123",
+                        Number = "222"
+                    });
+
                 var vid = facade.VideoService.Create(
                     new VideoBO() {
-                            VideoName="llkk",
-                            VideoType="terror",
-                            VideoLocation="hall xx"
+                            VideoName="Primer",
+                            VideoType="Example",
+                            VideoLocation="Home",
+                            AddressIds = new List<int>() { address.Id, address3.Id }
                     });
                 facade.VideoService.Create(
                     new VideoBO()
                     {
-                            VideoName = "yo",
-                            VideoType = "bio",
-                            VideoLocation = "hall 00"
+                            VideoName = "Second",
+                            VideoType = "Example",
+                            VideoLocation = "EASV",
+                            AddressIds = new List<int>() { address.Id, address2.Id}
                     });
-                facade.OrderService.Create(
+
+                for (int i = 0; i < 5; i++)
+                {
+                    facade.OrderService.Create(
                     new OrderBO()
                     {
                         DeliveryDate = DateTime.Now.AddMonths(1),
                         OrderDate = DateTime.Now.AddMonths(-1),
-                        Video = vid
+                        VideoId = vid.Id
                     });
+                }
+
             }
 
             app.UseMvc();

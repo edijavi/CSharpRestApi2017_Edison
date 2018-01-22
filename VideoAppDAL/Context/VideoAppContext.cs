@@ -19,8 +19,28 @@ namespace VideoAppDAL.Context
 
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<VideoAddress>()
+                .HasKey(va => new {va.AddressId, va.VideoId});
+
+            modelBuilder.Entity<VideoAddress>()
+                .HasOne(va => va.Address)
+                .WithMany(a => a.Videos)
+                .HasForeignKey(va => va.AddressId);
+
+            modelBuilder.Entity<VideoAddress>()
+                .HasOne(va => va.Video)
+                .WithMany(v => v.Addresses)
+                .HasForeignKey(va => va.VideoId);
+
+            base.OnModelCreating(modelBuilder);
+        }
+
         public DbSet<Video> Videos { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<Address> Addresses { get; set; }
+
 
     }
 }

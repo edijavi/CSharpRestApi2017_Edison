@@ -11,6 +11,7 @@ namespace VideoAppBLL.Services
     class VideoService : IVideoService
     {
         VideoConverter conv = new VideoConverter();
+        AddressConverter aConv = new AddressConverter();
 
         DALFacade facade;
         public VideoService(DALFacade facade)
@@ -54,7 +55,23 @@ namespace VideoAppBLL.Services
         {
             using (var uow = facade.UnitOfWork)
             {
-                return conv.Convert(uow.VideoRepository.Get(Id));
+                //1. Get and convert the video
+                var vid = conv.Convert(uow.VideoRepository.Get(Id));
+
+
+                //2. Get All related Addresses from AddressRepository using addressIds
+                //3. Convert and Add the Addresses to the CustomerBo
+                /*vid.Addresses = vid.AddressIds?
+                        .Select(id => aConv.Convert(uow.AddressRepository.Get(id)))
+                        .ToList();
+                */
+
+                vid.Addresses = uow.AddressRepository.GetAllById(vid.AddressIds)
+                    .Select(a => aConv.Convert(a))
+                    .ToList();
+
+                //4. Return the Customer
+                return vid;
             }
         }
 
@@ -79,9 +96,31 @@ namespace VideoAppBLL.Services
                     throw new InvalidOperationException("Video not found");
                 }
 
-                videoFromDb.VideoName = vid.VideoName;
-                videoFromDb.VideoType = vid.VideoType;
-                videoFromDb.VideoLocation = vid.VideoLocation;
+                var videoUpdated = conv.Convert(vid);
+                videoFromDb.VideoName = videoUpdated.VideoName;
+                videoFromDb.VideoType = videoUpdated.VideoType;
+                videoFromDb.VideoLocation = videoUpdated.VideoLocation;
+
+                //1. Remove All, except the "old" ids we wanna keep  (Avoid attached issues)
+                videoFromDb.Addresses.RemoveAll(
+                    va => !videoUpdated.Addresses.Exists(
+                        a => a.AddressId == va.AddressId &&
+                        a.VideoId == va.VideoId
+                        )
+                    );
+
+                //2. Remove All ids already in database from videoUpdated
+                videoUpdated.Addresses.RemoveAll(
+                    va => videoFromDb.Addresses.Exists(
+                        a => a.AddressId == va.AddressId &&
+                        a.VideoId == va.VideoId
+                    ));
+
+
+                //3. Add All new VideoAddresses not yet seen in the DB
+                videoFromDb.Addresses.AddRange(
+                    videoUpdated.Addresses);
+
                 uow.Complete();
                 return conv.Convert(videoFromDb);
 

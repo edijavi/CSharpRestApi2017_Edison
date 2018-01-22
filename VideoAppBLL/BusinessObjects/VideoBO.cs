@@ -13,8 +13,8 @@ namespace VideoAppBLL.BusinessObjects
         [MaxLength(20)]
         [MinLength(2)]
         public string VideoName { get; set; }
-
         public string VideoType { get; set; }
+        public string VideoLocation { get; set; }
 
         public string FullTitle
         {
@@ -22,6 +22,7 @@ namespace VideoAppBLL.BusinessObjects
 
         }
 
-        public string VideoLocation { get; set; }
+        public List<int> AddressIds { get; set; }
+        public List<AddressBO> Addresses { get; set; }
     }
 }

@@ -2,13 +2,14 @@
 using VideoAppDAL.Context;
 using System.Linq;
 using VideoAppDAL.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace VideoAppDAL.Repositories
 {
-    class VideoRepositoryEFMemory : IVideoRepository
+    class VideoRepository : IVideoRepository
     {
         VideoAppContext _context;
-        public VideoRepositoryEFMemory(VideoAppContext context)
+        public VideoRepository(VideoAppContext context)
         {
             _context = context;
 
@@ -29,12 +30,17 @@ namespace VideoAppDAL.Repositories
 
         public Video Get(int Id)
         {
-            return _context.Videos.FirstOrDefault(x => x.Id == Id);
+            return _context.Videos
+                .Include(v => v.Addresses)
+                .FirstOrDefault(x => x.Id == Id);
         }
 
         public List<Video> GetAll()
         {
-            return _context.Videos.ToList();
+            return _context.Videos
+                .Include(v => v.Addresses)
+                .ToList();
         }
+
     }
 }

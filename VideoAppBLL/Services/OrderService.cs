@@ -42,6 +42,7 @@ namespace VideoAppBLL.Services
             using (var uow = _facade.UnitOfWork)
             {
                 var orderEntity = uow.OrderRepository.Get(Id);
+                orderEntity.Video = uow.VideoRepository.Get(orderEntity.VideoId);
                 return conv.Convert(orderEntity);
             }
         }
@@ -59,13 +60,18 @@ namespace VideoAppBLL.Services
             using (var uow = _facade.UnitOfWork)
             {
                 var orderEntity = uow.OrderRepository.Get(order.Id);
-                if (orderEntity==null)
+                if (orderEntity == null)
                 {
                     throw new InvalidOperationException("Order not found");
                 }
-                orderEntity.DeliveryDate = order.DeliveryDate;
+                
                 orderEntity.OrderDate = order.OrderDate;
+                orderEntity.DeliveryDate = order.DeliveryDate;
+                orderEntity.VideoId = order.VideoId;
                 uow.Complete();
+
+                //Bll Choice
+                orderEntity.Video = uow.VideoRepository.Get(orderEntity.VideoId);
                 return conv.Convert(orderEntity);
             }
         }

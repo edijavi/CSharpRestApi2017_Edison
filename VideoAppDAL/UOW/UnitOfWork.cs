@@ -10,13 +10,15 @@ namespace VideoAppDAL.UOW
     {
         public IVideoRepository VideoRepository { get; internal set; }
         public IOrderRepository OrderRepository { get; internal set; }
+        public IAddressRepository AddressRepository { get; internal set; }
         private VideoAppContext context;
 
         public UnitOfWork()
         {
             context = new VideoAppContext();
-            VideoRepository = new VideoRepositoryEFMemory(context);
+            VideoRepository = new VideoRepository(context);
             OrderRepository = new OrderRepository(context);
+            AddressRepository = new AddressRepository(context);
         }
 
         public int Complete()

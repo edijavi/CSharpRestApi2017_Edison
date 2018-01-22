@@ -18,10 +18,6 @@ namespace VideoAppDAL.Repositories
 
         public Order Create(Order order)
         {
-            if (order.Video !=null)
-            {
-                _context.Entry(order.Video).State =EntityState.Unchanged;
-            }
             _context.Orders.Add(order);
             return order;
 

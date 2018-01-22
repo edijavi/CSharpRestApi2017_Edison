@@ -8,6 +8,7 @@ namespace VideoAppDAL
     {
         IVideoRepository VideoRepository { get; }
         IOrderRepository OrderRepository { get; }
+        IAddressRepository AddressRepository { get; }
 
         int Complete();
     }

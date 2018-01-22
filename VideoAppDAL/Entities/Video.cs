@@ -16,5 +16,6 @@ namespace VideoAppDAL.Entities
 
         //Relación de uno a varios objetos
         public List<Order> Orders  { get; set; }
+        public List<VideoAddress> Addresses { get; set; }
     }
 }

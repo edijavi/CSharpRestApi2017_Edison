@@ -16,3 +16,12 @@ C:\work\cSharp\CSharpRestAPI2017\VideoAppDAL\obj\Debug\netcoreapp2.0\VideoAppDAL
 C:\work\cSharp\CSharpRestAPI2017\VideoAppDAL\obj\Debug\netcoreapp2.0\VideoAppDAL.dll
 C:\work\cSharp\CSharpRestAPI2017\VideoAppDAL\obj\Debug\netcoreapp2.0\VideoAppDAL.pdb
 C:\work\cSharp\CSharpRestAPI2017\VideoAppDAL\obj\Debug\netcoreapp2.0\VideoAppDAL.csprojResolveAssemblyReference.cache
+C:\Users\edila\Desktop\Work\CSharp\CSharpRestApi2017_Edison\VideoAppDAL\bin\Debug\netcoreapp2.0\VideoAppDAL.deps.json
+C:\Users\edila\Desktop\Work\CSharp\CSharpRestApi2017_Edison\VideoAppDAL\bin\Debug\netcoreapp2.0\VideoAppDAL.dll
+C:\Users\edila\Desktop\Work\CSharp\CSharpRestApi2017_Edison\VideoAppDAL\bin\Debug\netcoreapp2.0\VideoAppDAL.pdb
+C:\Users\edila\Desktop\Work\CSharp\CSharpRestApi2017_Edison\VideoAppDAL\obj\Debug\netcoreapp2.0\VideoAppDAL.csprojResolveAssemblyReference.cache
+C:\Users\edila\Desktop\Work\CSharp\CSharpRestApi2017_Edison\VideoAppDAL\obj\Debug\netcoreapp2.0\VideoAppDAL.csproj.CoreCompileInputs.cache
+C:\Users\edila\Desktop\Work\CSharp\CSharpRestApi2017_Edison\VideoAppDAL\obj\Debug\netcoreapp2.0\VideoAppDAL.AssemblyInfoInputs.cache
+C:\Users\edila\Desktop\Work\CSharp\CSharpRestApi2017_Edison\VideoAppDAL\obj\Debug\netcoreapp2.0\VideoAppDAL.AssemblyInfo.cs
+C:\Users\edila\Desktop\Work\CSharp\CSharpRestApi2017_Edison\VideoAppDAL\obj\Debug\netcoreapp2.0\VideoAppDAL.dll
+C:\Users\edila\Desktop\Work\CSharp\CSharpRestApi2017_Edison\VideoAppDAL\obj\Debug\netcoreapp2.0\VideoAppDAL.pdb
